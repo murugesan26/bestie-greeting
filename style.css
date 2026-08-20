@@ -66,8 +66,11 @@ body{font-family:Arial,sans-serif;background:#090014;color:#fff;overflow-x:hidde
   color: #e12680;
 }
 
-.quiz-intro {
-  margin-bottom: 5px;
+.quiz-intro,
+.quiz-box > p {
+  color: #e12680;
+  font-weight: bold;
+  font-size: 1.05rem;
 }
 
 #questionNumber {
