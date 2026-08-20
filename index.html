@@ -1,74 +1,485 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>For My AJ ❤️</title>
+
+  <title>For My AJ 🩵</title>
+
   <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
-  <div id="hearts"></div>
 
-  <header class="hero">
-    <div class="topbar">For My AJ <span>❤️</span></div>
-    <button id="musicBtn" class="music">♫ Play Music</button>
 
-    <p class="small">Someone special has a message for you...❤️</p>
-    <h1>Hey Bestie! <span>♡</span></h1>
+  <!-- =========================================
+       QUIZ / LOCK SCREEN
+       ========================================= -->
 
-    <button id="gift" class="gift" aria-label="Open gift">
-      <div class="lid"></div>
-      <div class="box"><i></i></div>
-      <div class="ribbon"></div>
-      <div class="bow">🎀</div>
-    </button>
-    <p class="hint">Click the gift! ↗</p>
-  </header>
+  <div id="quizScreen" class="quiz-screen">
 
-  <section class="memories">
-    <h2>♡ Our Memories ♡</h2>
-    <div class="photo-grid">
-      <div class="memory">🌅<span>Crazy moments</span></div>
-      <div class="memory">😂<span>Endless laughs</span></div>
-      <div class="memory">🚶<span>Every adventure</span></div>
-      <div class="memory">🌄<span>Deep talks</span></div>
-      <div class="memory">🎉<span>Unforgettable days</span></div>
-      <div class="memory">💬<span>Endless gossip talks</span></div>
+    <div class="quiz-box">
+
+      <div class="quiz-heart">
+        🩵
+      </div>
+
+      <h1>
+        Hey AJ! 🩵
+      </h1>
+
+      <p class="quiz-intro">
+        Before you enter my surprise...
+      </p>
+
+      <p>
+        Let's see if you really know your Muru 😏
+      </p>
+
+
+      <div id="questionNumber">
+        Question 1 of 5
+      </div>
+
+
+      <h2 id="question">
+        Question
+      </h2>
+
+
+      <div id="answers"></div>
+
+
+      <p id="quizMessage"></p>
+
     </div>
-    <p>Many laughs, crazy moments, deep talks, stupid fights and unforgettable memories.</p>
-    <em>Wouldn't trade them for anything! ❤️</em>
-  </section>
 
-  <section class="letter" id="letter">
-    <div class="envelope">💌</div>
-    <div>
-      <h2>A Message For You ❤️</h2>
-      <p>Dear Frnd,</p>
-      <p>I don't say it enough, but honestly... I'm so lucky to have you in my life.</p>
-      <p>You're that one person who has seen my worst days and still stayed.</p>
-      <p>Thank you for always being there — for the laughs, the advice, the late-night talks, the crazy plans and for just being YOU.</p>
-      <p>You're not a person. <strong>You're my Best Friend. ❤️</strong></p>
-      <p>I wish you all the happiness in the world. Keep smiling, keep shining! You deserve the best, always.</p>
-      <p>Love you loads! 💗</p>
-    </div>
-  </section>
+  </div>
 
-  <section class="ending">
-    <h2>Happy Birthday, My Dear Best Frnd! 🎉</h2>
-    <p>May this year bring you endless happiness, success and beautiful memories.</p>
-    <p>I'll always be here for you, no matter what.</p>
-    <p><em>Here's to many more adventures together! ❤️</em></p>
-    <p class="signature">
-    — By Your Charm, Muru😊✨
-  </p>
-    <button id="confetti">Thanks for being my Best Friend ❤️</button>
-  </section>
 
-  <audio id="music" loop>
-    <!-- Add your own music file as music.mp3 in this folder if you want music. -->
-    <source src="music.mp3" type="audio/mpeg">
-  </audio>
+
+  <!-- =========================================
+       MAIN WEBSITE
+       ========================================= -->
+
+  <div id="mainWebsite" class="hidden">
+
+
+    <!-- FLOATING HEARTS -->
+
+    <div id="hearts"></div>
+
+
+
+    <!-- =========================================
+         HERO
+         ========================================= -->
+
+    <header class="hero">
+
+
+      <div class="topbar">
+
+        For My AJ <span>🩵</span>
+
+      </div>
+
+
+
+      <!-- MUSIC PLAYER -->
+
+      <div class="music-player">
+
+
+        <div class="music-disc">
+
+          🎵
+
+        </div>
+
+
+        <div class="music-info">
+
+          <strong>
+            Our Special Song 🩵
+          </strong>
+
+          <span>
+            For my AJ
+          </span>
+
+        </div>
+
+
+        <button
+          id="musicBtn"
+          class="music-control">
+
+          ▶
+
+        </button>
+
+
+      </div>
+
+
+
+      <p class="small">
+
+        Someone special has a message for you...❤️
+
+      </p>
+
+
+
+      <h1>
+
+        Hey Bestie! <span>♡</span>
+
+      </h1>
+
+
+
+      <!-- GIFT -->
+
+      <button
+        id="gift"
+        class="gift"
+        aria-label="Open gift">
+
+
+        <div class="lid"></div>
+
+
+        <div class="box">
+
+          <i></i>
+
+        </div>
+
+
+        <div class="ribbon"></div>
+
+
+        <div class="bow">
+
+          🎀
+
+        </div>
+
+
+      </button>
+
+
+      <p class="hint">
+
+        Click the gift! ↗
+
+      </p>
+
+
+    </header>
+
+
+
+    <!-- =========================================
+         MEMORIES
+         ========================================= -->
+
+    <section class="memories">
+
+
+      <h2>
+
+        ♡ Our Memories ♡
+
+      </h2>
+
+
+
+      <div class="photo-grid">
+
+
+        <div class="memory">
+
+          🌅
+
+          <span>
+            Crazy moments
+          </span>
+
+        </div>
+
+
+
+        <div class="memory">
+
+          😂
+
+          <span>
+            Endless laughs
+          </span>
+
+        </div>
+
+
+
+        <div class="memory">
+
+          🚶
+
+          <span>
+            Every adventure
+          </span>
+
+        </div>
+
+
+
+        <div class="memory">
+
+          🌄
+
+          <span>
+            Deep talks
+          </span>
+
+        </div>
+
+
+
+        <div class="memory">
+
+          🎉
+
+          <span>
+            Unforgettable days
+          </span>
+
+        </div>
+
+
+
+        <div class="memory">
+
+          💬
+
+          <span>
+            Endless gossip talks
+          </span>
+
+        </div>
+
+
+      </div>
+
+
+
+      <p>
+
+        Many laughs, crazy moments, deep talks,
+        stupid fights and unforgettable memories.
+
+      </p>
+
+
+      <em>
+
+        Wouldn't trade them for anything! ❤️
+
+      </em>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         LETTER
+         ========================================= -->
+
+    <section
+      class="letter"
+      id="letter">
+
+
+      <div class="envelope">
+
+        💌
+
+      </div>
+
+
+
+      <div>
+
+
+        <h2>
+
+          A Message For You ❤️
+
+        </h2>
+
+
+
+        <p>
+
+          Dear Frnd,
+
+        </p>
+
+
+
+        <p>
+
+          I don't say it enough, but honestly...
+          I'm so lucky to have you in my life.
+
+        </p>
+
+
+
+        <p>
+
+          You're that one person who has seen my
+          worst days and still stayed.
+
+        </p>
+
+
+
+        <p>
+
+          Thank you for always being there —
+          for the laughs, the advice, the late-night talks,
+          the crazy plans and for just being YOU.
+
+        </p>
+
+
+
+        <p>
+
+          You're not a person.
+          <strong>
+            You're my Best Friend. ❤️
+          </strong>
+
+        </p>
+
+
+
+        <p>
+
+          I wish you all the happiness in the world.
+          Keep smiling, keep shining!
+          You deserve the best, always.
+
+        </p>
+
+
+
+        <p>
+
+          Love you loads! 💗
+
+        </p>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         ENDING
+         ========================================= -->
+
+    <section class="ending">
+
+
+      <h2>
+
+        Happy Birthday, My Dear Best Frnd! 🎉
+
+      </h2>
+
+
+
+      <p>
+
+        May this year bring you endless happiness,
+        success and beautiful memories.
+
+      </p>
+
+
+
+      <p>
+
+        I'll always be here for you, no matter what.
+
+      </p>
+
+
+
+      <p>
+
+        <em>
+
+          Here's to many more adventures together! ❤️
+
+        </em>
+
+      </p>
+
+
+
+      <p class="signature">
+
+        — By Your Charm, Muru😊✨
+
+      </p>
+
+
+
+      <button id="confetti">
+
+        Thanks for being my Best Friend ❤️
+
+      </button>
+
+
+    </section>
+
+
+
+    <!-- =========================================
+         MUSIC
+         ========================================= -->
+
+    <audio id="music" loop>
+
+      <source
+        src="music.mp3"
+        type="audio/mpeg">
+
+    </audio>
+
+
+  </div>
+
+
 
   <script src="script.js"></script>
+
 </body>
+
 </html>
