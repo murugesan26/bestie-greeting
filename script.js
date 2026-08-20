@@ -256,22 +256,32 @@ function checkAnswer(selectedAnswer) {
 
 function unlockWebsite() {
 
+  // Remember that the quiz was completed
+  localStorage.setItem("quizCompleted", "true");
 
-  quizScreen.classList.add(
-    "hidden"
-  );
+  quizScreen.classList.add("hidden");
 
-
-  mainWebsite.classList.remove(
-    "hidden"
-  );
-
+  mainWebsite.classList.remove("hidden");
 
   hearts(30);
 
 }
 
+/* =====================================================
+   CHECK IF QUIZ WAS ALREADY COMPLETED
+   ===================================================== */
 
+if (localStorage.getItem("quizCompleted") === "true") {
+
+  quizScreen.classList.add("hidden");
+
+  mainWebsite.classList.remove("hidden");
+
+} else {
+
+  showQuestion();
+
+}
 
 /* =====================================================
    START QUIZ
