@@ -256,8 +256,8 @@ function checkAnswer(selectedAnswer) {
 
 function unlockWebsite() {
 
-  // Remember that the quiz was completed
-  localStorage.setItem("quizCompleted", "true");
+  // Remember only during this browser session
+  sessionStorage.setItem("quizCompleted", "true");
 
   quizScreen.classList.add("hidden");
 
@@ -268,10 +268,12 @@ function unlockWebsite() {
 }
 
 /* =====================================================
-   CHECK IF QUIZ WAS ALREADY COMPLETED
+   CHECK QUIZ STATUS
    ===================================================== */
 
-if (localStorage.getItem("quizCompleted") === "true") {
+if (sessionStorage.getItem("quizCompleted") === "true") {
+
+  // Refresh → directly show website
 
   quizScreen.classList.add("hidden");
 
@@ -279,15 +281,11 @@ if (localStorage.getItem("quizCompleted") === "true") {
 
 } else {
 
+  // New session → show quiz
+
   showQuestion();
 
 }
-
-/* =====================================================
-   START QUIZ
-   ===================================================== */
-
-showQuestion();
 
 
 
